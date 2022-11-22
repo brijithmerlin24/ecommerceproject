@@ -1,5 +1,7 @@
 package com.ecommerceproject.admin.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +16,11 @@ public class ProductCategoryService {
 	private ProductCategoryDao dao;
 	
 	public ProductCategory addCategory(ProductCategoryDto dto) {
-		ProductCategory category = ProductCategory.build(1, dto.getProduct_Category_Name(), dto.getProduct_Category_Description());
+		ProductCategory category = ProductCategory.build(1, dto.getProductCategoryName(), dto.getProductCategoryDescription());
 		return dao.save(category);
+	}
+	
+	public List<ProductCategory> listOfCategories(){
+		return dao.findAll();
 	}
 }

@@ -1,7 +1,6 @@
 package com.ecommerceproject.admin.dto;
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,11 +12,11 @@ import lombok.NoArgsConstructor;
 public class ProductDto {
 	
 	@NotNull(message = "Product category name cannot be null")
-	private String product_Category_Name;
+	private String productCategoryName;
 	@NotNull(message = "Product name cannot be null")
-	private String product_Name;
+	private String productName;
 	@NotNull(message = "Product description cannot be null")
-	private String product_Description;
+	private String productDescription;
 	@NotNull(message = "Product price cannot be null")
-	private int product_Price;
+	private int productPrice;
 }
