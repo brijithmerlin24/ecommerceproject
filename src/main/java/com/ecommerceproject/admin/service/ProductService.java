@@ -35,6 +35,10 @@ public class ProductService {
 		return dao.findAll();
 	}
 	
+	public Product viewProductByPrice(int productPrice) {
+		Product product = dao.findByProductPrice(productPrice);
+		return product;
+	}
 //	public String removeProduct(String productName) {
 //		dao.deleteByProductName(productName);
 //		return "Product removed successfully";
