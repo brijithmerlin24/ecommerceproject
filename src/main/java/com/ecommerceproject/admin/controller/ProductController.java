@@ -33,8 +33,8 @@ public class ProductController {
 		return new ResponseEntity<>(service.addProduct(dto), HttpStatus.CREATED);
 	}
 	
-	@GetMapping("/viewProduct/{productName}")
-	public ResponseEntity<Product> viewProduct(@PathVariable String productName){
+	@GetMapping("/viewProductByName/{productName}")
+	public ResponseEntity<Product> viewProductByName(@PathVariable String productName){
 		return ResponseEntity.ok(service.viewProductByName(productName));
 	}
 	
@@ -46,6 +46,11 @@ public class ProductController {
 	@GetMapping("/listAllProducts")
 	public ResponseEntity<List<Product>> listAllProducts(){
 		return ResponseEntity.ok(service.listAllProducts());
+	}
+	
+	@GetMapping("/viewProductByPrice/{productPrice}")
+	public ResponseEntity<Product> viewProductByPrice(@PathVariable int productPrice){
+		return ResponseEntity.ok(service.viewProductByPrice(productPrice));
 	}
 //	
 //	@DeleteMapping("/removeProduct/{productName}")
