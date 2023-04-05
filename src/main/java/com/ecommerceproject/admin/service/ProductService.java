@@ -51,6 +51,7 @@ public class ProductService {
 	public Product updateProductDetails(Product newProduct) {
 		Product product = dao.findByProductName(newProduct.getProductName());
 		product.setProductPrice(newProduct.getProductPrice());
+		System.out.println("Updating product");
 		return dao.save(product);		
 	}
 	
