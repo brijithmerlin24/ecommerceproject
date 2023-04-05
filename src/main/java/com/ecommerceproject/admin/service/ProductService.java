@@ -22,7 +22,7 @@ public class ProductService {
 		//return dao.save(product);
 		int i = dao.saveNewProduct(product.getProductCategoryName(), product.getProductName(), product.getProductDescription(), product.getProductPrice());
 		Product product1 = dao.findByProductName(product.getProductName());
-		System.out.println("Adding new product");
+		System.out.println("Adding new productsss");
 		return product1;
 	}
 	
