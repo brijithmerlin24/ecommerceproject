@@ -33,5 +33,5 @@ public interface ProductDao extends JpaRepository<Product, Integer> {
 	@Modifying
 	@Query(value = "delete from Product_Table where Product_Name = :productName", nativeQuery = true)
 	public void deleteProductName(@Param("productName") String productName);
-
+	
 }

@@ -47,11 +47,10 @@ public class ProductService {
 		dao.deleteProductName(productName);
 	}
 	
-//	public String updateProductDetails(String productName) {
-//		Product product = dao.findByProductName(productName);
-//				
-//		return "Product updated successfully";
-//		
-//	}
-
+	public Product updateProductDetails(Product newProduct) {
+		Product product = dao.findByProductName(newProduct.getProductName());
+		product.setProductPrice(newProduct.getProductPrice());
+		return dao.save(product);		
+	}
+	
 }

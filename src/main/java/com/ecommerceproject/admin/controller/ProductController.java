@@ -60,6 +60,13 @@ public class ProductController {
 		service.removeProduct(productName);
 		return "Product deleted successfully";
 	}
+	
+	@PutMapping("/updateProductPrice")
+	public String updateProductPrice(@RequestBody Product product) {
+		service.updateProductDetails(product);
+		return "Product updated successfully";
+		
+	}
 
 }
 
