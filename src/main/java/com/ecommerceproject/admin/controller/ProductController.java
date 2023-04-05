@@ -52,10 +52,11 @@ public class ProductController {
 	public ResponseEntity<Product> viewProductByPrice(@PathVariable int productPrice){
 		return ResponseEntity.ok(service.viewProductByPrice(productPrice));
 	}
-//	
-//	@DeleteMapping("/removeProduct/{productName}")
-//	public String removeProduct(@PathVariable String productName){
-//		return service.removeProduct(productName);
-//	}
+	
+	@DeleteMapping("/removeProduct/{productName}")
+	public String removeProduct(@PathVariable String productName){
+		service.removeProduct(productName);
+		return "Product deleted successfully";
+	}
 }
 
