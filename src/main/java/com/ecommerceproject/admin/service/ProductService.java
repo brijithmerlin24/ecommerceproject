@@ -22,6 +22,9 @@ public class ProductService {
 		//return dao.save(product);
 		int i = dao.saveNewProduct(product.getProductCategoryName(), product.getProductName(), product.getProductDescription(), product.getProductPrice());
 		Product product1 = dao.findByProductName(product.getProductName());
+
+		System.out.println("Adding new productssss");
+
 		return product1;
 	}
 	
@@ -47,11 +50,11 @@ public class ProductService {
 		dao.deleteProductName(productName);
 	}
 	
-//	public String updateProductDetails(String productName) {
-//		Product product = dao.findByProductName(productName);
-//				
-//		return "Product updated successfully";
-//		
-//	}
-
+	public Product updateProductDetails(Product newProduct) {
+		Product product = dao.findByProductName(newProduct.getProductName());
+		product.setProductPrice(newProduct.getProductPrice());
+		System.out.println("Updating product");
+		return dao.save(product);		
+	}
+	
 }

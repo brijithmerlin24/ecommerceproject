@@ -27,4 +27,6 @@ public class ProductCategoryService {
 	public void removeCategory(String productCategoryName) {
 		dao.deleteByCategoryName(productCategoryName);
 	}
+	
+	
 }
