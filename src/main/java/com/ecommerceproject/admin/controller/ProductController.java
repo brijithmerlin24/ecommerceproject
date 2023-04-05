@@ -65,7 +65,6 @@ public class ProductController {
 	public String updateProductPrice(@RequestBody Product product) {
 		service.updateProductDetails(product);
 		return "Product updated successfully";
-		
 	}
 
 }
