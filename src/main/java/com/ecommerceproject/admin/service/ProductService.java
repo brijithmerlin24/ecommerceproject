@@ -39,15 +39,4 @@ public class ProductService {
 		Product product = dao.findByProductPrice(productPrice);
 		return product;
 	}
-//	public String removeProduct(String productName) {
-//		dao.deleteByProductName(productName);
-//		return "Product removed successfully";
-//	}
-	
-//	public String updateProductDetails(String productName) {
-//		Product product = dao.findByProductName(productName);
-//				
-//		return "Product updated successfully";
-//		
-//	}
 }

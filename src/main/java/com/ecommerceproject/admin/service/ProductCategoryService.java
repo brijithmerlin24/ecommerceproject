@@ -23,4 +23,8 @@ public class ProductCategoryService {
 	public List<ProductCategory> listOfCategories(){
 		return dao.findAll();
 	}
+	
+	public void removeCategory(String productCategoryName) {
+		dao.deleteByCategoryName(productCategoryName);
+	}
 }
